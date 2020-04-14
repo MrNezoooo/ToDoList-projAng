@@ -1,0 +1,16 @@
+<!-- SIDEBAR -->
+<div class="sidebar" data-background-color="white" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+  <div class="logo"><a class="simple-text logo-normal" href="http://leogarden.com.ua">
+    Leo Garden
+  </a></div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+
+      <li *ngFor="let category of categories" class="nav-item">
+        <a class="nav-link">
+          <p>{{category.title}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
