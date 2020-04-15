@@ -36,8 +36,8 @@ export class TestData {
       title: 'Залить бензин полный бак',
       priority: TestData.priorities[2],
       completed: false,
-      category: TestData.categories[9]
-
+      category: TestData.categories[9],
+      date: new Date('2019-04-10')
     },
 
     {
@@ -45,8 +45,8 @@ export class TestData {
       title: 'Передать отчеты начальнику управления',
       priority: TestData.priorities[0],
       completed: false,
-      category: TestData.categories[0]
-
+      category: TestData.categories[0],
+      date: new Date('2019-04-11')
     },
 
     {
@@ -55,7 +55,6 @@ export class TestData {
       priority: TestData.priorities[2],
       completed: true,
       category: TestData.categories[1]
-
     },
 
     {
@@ -63,8 +62,8 @@ export class TestData {
       title: 'Сходить в парк с семьей, пригласить друзей',
       priority: TestData.priorities[1],
       completed: false,
-      category: TestData.categories[1]
-
+      category: TestData.categories[1],
+      date: new Date('2019-08-17')
     },
     {
       id: 5,
@@ -77,8 +76,8 @@ export class TestData {
       title: 'Сходить на семинар по программированию',
       priority: TestData.priorities[1],
       completed: true,
-      category: TestData.categories[2]
-
+      category: TestData.categories[2],
+      date: new Date('2019-06-11')
     },
 
     {
@@ -99,8 +98,8 @@ export class TestData {
       title: 'Подтянуться 10 раз',
       priority: TestData.priorities[2],
       completed: false,
-      category: TestData.categories[4]
-
+      category: TestData.categories[4],
+      date: new Date('2019-03-12')
     },
     {
       id: 10,
@@ -128,8 +127,8 @@ export class TestData {
       title: 'Купить продукты на неделю',
       priority: TestData.priorities[2],
       completed: false,
-      category: TestData.categories[5]
-
+      category: TestData.categories[5],
+      date: new Date('2019-05-11')
     },
 
     {
@@ -168,8 +167,8 @@ export class TestData {
       title: 'Сдать анализы, проверить гемоглобин',
       priority: TestData.priorities[3],
       completed: false,
-      category: TestData.categories[8]
-
+      category: TestData.categories[8],
+      date: new Date('2020-12-11')
 
     },
 
@@ -178,8 +177,8 @@ export class TestData {
       title: 'Сравнить новый айпад с самсунгом',
       priority: TestData.priorities[0],
       completed: false,
-      category: TestData.categories[7]
-
+      category: TestData.categories[7],
+      date: new Date('2019-10-11')
 
     },
 
@@ -188,8 +187,8 @@ export class TestData {
       title: 'Футбол с сотрудниками',
       priority: TestData.priorities[0],
       completed: false,
-      category: TestData.categories[4]
-
+      category: TestData.categories[4],
+      date: new Date('2019-03-17')
 
     }
 
