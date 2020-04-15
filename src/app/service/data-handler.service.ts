@@ -22,7 +22,11 @@ export class DataHandlerService {
     return TestData.tasks;
   }
 
-  getPriority(): Priority[] {
-    return TestData.priorities;
+  /*фільтри по категоріям*/
+  getTasksByCategory(category: Category): Task[] {
+    const tasks = TestData.tasks.filter(value => value.category === category);  /*Ми будем проходити по всіх елементах масива Task[] value значення з масива Task[]*/
+    /*Фільтровані всі задачі в якій category буде рівна переданій категорії.її ми будемо передавати з html сторінки*/
+    return tasks
   }
+
 }
