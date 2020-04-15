@@ -3,12 +3,16 @@ import {Category} from "../model/Category";
 import {TestData} from "../data/TestData";
 import {Priority} from "../model/Priority";
 import {Task} from '../model/Task';
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DataHandlerService {
+
+  tasksSubject = new Subject<Task[]>()
+
 
   constructor() {
   }
@@ -18,15 +22,21 @@ export class DataHandlerService {
     return TestData.categories;
   }
 
-  getTasks(): Task[] {
-    return TestData.tasks;
+  fillTasks() {
+    this.tasksSubject.next(TestData.tasks)
   }
 
   /*фільтри по категоріям*/
-  getTasksByCategory(category: Category): Task[] {
-    const tasks = TestData.tasks.filter(value => value.category === category);  /*Ми будем проходити по всіх елементах масива Task[] value значення з масива Task[]*/
-    /*Фільтровані всі задачі в якій category буде рівна переданій категорії.її ми будемо передавати з html сторінки*/
+
+  /*fillTasksByCategory(category: Category): Task[] {
+    const tasks = TestData.tasks.filter(value => value.category === category);  /!*Ми будем проходити по всіх елементах масива Task[] value значення з масива Task[]*!/
+    /!*Фільтровані всі задачі в якій category буде рівна переданій категорії.її ми будемо передавати з html сторінки*!/
     return tasks
+  }*/
+
+  fillTasksByCategory(category: Category) {
+    const tasks = TestData.tasks.filter(value1 => value1.category === category);
+    this.tasksSubject.next(tasks);
   }
 
 }
