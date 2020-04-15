@@ -11,14 +11,16 @@ export class CategoriesComponent implements OnInit {
 
   categories: Category[];
 
+
   constructor(private dataHandler: DataHandlerService) {
-  }
+  } /*Внідряєм DataHandlerService*/
 
   /* метод викличется автоматично післястворення(ініцілізації) компонента*/
-  ngOnInit() {
+  ngOnInit() {  /*В методі ngOnInit ми реалізували отримання цього масива*/
     this.categories = this.dataHandler.getCategories();
     /*його викличе але дані ніде не збережутся тому треба вище створити масив categories: Category[]; */
     console.log(this.categories)
   }
 
 }
+
